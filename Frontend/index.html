@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="new-student">
+        <h1>Attendance System</h1>
+        <form id="form" class="form">
+          <input name="id" type="number" placeholder="ID" required>
+          <input name="name" type="text" placeholder="Name" required>
+          <input name="class" type="text" placeholder="Class" required>
+          <h3 id="err">Please Fill All Input Fields Correctly</h3>
+          <button class="prim" type="button" onclick="takeImages()">Take Training Images</button>
+          <button class="acc" type="button" onclick="trainImages()">Train the Model</button>
+        </form>
+      </div>
+      <div class="notification-area">
+        <div class="player">
+          <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player id="default-animation" src="https://lottie.host/3c4b3425-bf43-4f27-bbec-5b2f1bf4bf80/4VqgsCV0zi.json" background="transparent" speed="1" style="width: 250px; height: 250px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+          <dotlottie-player id="training-animation" src="https://lottie.host/13046ef4-eefd-4f97-a0f9-5ed0486401bf/b6BvtlXeb6.json" background="transparent" speed="1" style="width: 250px; height: 250px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+          <dotlottie-player id="attendance-animation" src="https://lottie.host/5d962277-f4fc-4baa-bd9f-4d007f22228f/ndv2NO7Wc4.json" background="transparent" speed="1" style="width: 250px; height: 250px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+        </div>
+        <div class="notification" id="notification">
+          Register a new Student or Scan the current one
+        </div>
+        <select name="teacher" id="teacher">
+            <option value="">--SELECT SUBJECT OF CLASS--</option>
+            <option value="suman">Suman(Engineering Design)</option>
+            <option value="sonam">Sonam(Discrete Mathematics)</option>
+            <option value="ruchi">Ruchi(DSA)</option>
+            <option value="prachi">Prachi(DBMS)</option>
+            <option value="kirtika">Kirtika(Operating System)</option>
+        </select>
+        <h3 id="err-class">Please Select a class to take attendace for</h3>
+        <button class="sec" type="button" onclick="takeAttendance()">Take Attendance</button>
+        <a href="/attendance.html">View Attendance</a>
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>
